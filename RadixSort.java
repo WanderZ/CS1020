@@ -1,11 +1,8 @@
 /* Radix Sort Algorithms - non-comparison sort*/
-
 import java.util.*;
 
 class RadixSort {
-  
   public static void main (String args[]) {
-    
     RadixSort rs = new RadixSort();
     int[] a = {123, 2154, 222, 4, 283, 1560, 1061, 2150};
     
@@ -28,7 +25,8 @@ class RadixSort {
   // precond: a[] is not empty
   // precond: n, d is positive integer
   // postcond: a[] is sorted
-  private void sort (int[] a) {	sort (a, 8, 4); }
+  // @overriding method
+  private void sort (int[] a) {	sort (a, 8, 4); } // 8 4-digit numerics
 
   private void sort (int[] a, int n, int d) {
   	for (int j = d; j > 0; j --) {
