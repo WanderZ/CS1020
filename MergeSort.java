@@ -32,7 +32,11 @@ class Merge {
 			merge(a, i, mid, j); // conquer step
 		}
 	}
-
+	
+	/*
+	 * Merge() method is doing bulk of operations.
+	 * Overal time complexity is O(n) * O(log n) = O(nlogN)
+	 */
 	// combine two sorted subarray into one whole
 	// precon: a[] is not empty
 	// precon: i < j, and mid = (i + j) / 2
@@ -56,5 +60,4 @@ class Merge {
 		for (int k = 0; k < temp.length; k ++) 
 			a[i + k] = temp[k];
 	}
-
 }
