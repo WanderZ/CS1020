@@ -33,6 +33,7 @@ class RadixSort {
 
   		// initialize 10 queues to store the groups with the same j-th digit
   		// 10 groups because there are 10 digits (0, 1, 2, ..., 9)
+  		/*
   		Queue<Integer> q0 = new LinkedList<Integer>();
   		Queue<Integer> q1 = new LinkedList<Integer>();
   		Queue<Integer> q2 = new LinkedList<Integer>();
@@ -45,11 +46,17 @@ class RadixSort {
   		Queue<Integer> q9 = new LinkedList<Integer>();
 
   		Queue[] q = {q0, q1, q2, q3, q4, q5, q6, q7, q8, q9}; 
+  		// Queue<Integer> q = {q0, q1, q2, q3, q4, q5, q6, q7, q8, q9};
+  		*/
+  	  Queue<Integer>[] p = new LinkedList[10];
+  	  for (int i = 0; i < 10; i ++) {
+  	    p[i] = new LinkedList<Integer>();
+  	  }
 
   		// place a[i] at the end of group k
   		for (int i = 0; i < n; i ++) {
   			int k = getDigit(a[i], j, d);
-  			q[k].offer(a[i]);
+  			q[k].offer(a[i]); // q[k].add(a[i]);
   		}
 
   		// replace a[] with all items in queues
