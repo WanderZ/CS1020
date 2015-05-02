@@ -20,7 +20,10 @@ class BubbleSort {
 
 		System.out.println("]");
 	}
-
+	
+	// precond: a[] is not empty
+	// postcond: a[] is sorted
+	// description: sort() method sorts an array into non-descending direction
 	private static void sort(int[] a) {
 		for (int i = 0; i < a.length - 1; i ++) {
 			boolean done = true;
