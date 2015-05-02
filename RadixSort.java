@@ -26,7 +26,7 @@ class RadixSort {
   // precond: n, d is positive integer
   // postcond: a[] is sorted
   // @overriding method
-  private void sort (int[] a) {	sort (a, 8, 4); } // 8 4-digit numerics
+  private void sort (int[] a) {	sort (a, 8, 4); }  // 8 4-digit numerics
 
   private void sort (int[] a, int n, int d) {
   	for (int j = d; j > 0; j --) {
@@ -46,7 +46,7 @@ class RadixSort {
   		Queue<Integer> q9 = new LinkedList<Integer>();
 
   		Queue[] q = {q0, q1, q2, q3, q4, q5, q6, q7, q8, q9}; 
-  		// Queue<Integer> q = {q0, q1, q2, q3, q4, q5, q6, q7, q8, q9};
+  		// Queue<Integer> q = {q0, q1, q2, q3, q4, q5, q6, q7, q8, q9}; // Error!!
   		*/
   	  Queue<Integer>[] p = new LinkedList[10];
   	  for (int i = 0; i < 10; i ++) {
@@ -68,7 +68,7 @@ class RadixSort {
   		}
   	} 
   }
-
+  
   // precond: j is a positive integer
   // precond: String s is a stirng a numeric number
   // description: j is the j-th digit to be found, while d is the whole digits a number has
